@@ -22,6 +22,31 @@
   - package.json の devDependencies にlite-server が追加される
   - package.json の scripts に開発に使用するツールを設定する
 
+### enumについて
+- 安全上の問題がある (以下、誤った使い方をしているが、コンパイルエラーが出ないパターン)
+1. 10 は初めに定義していないが代入できる
+```typescript
+enum BookEnum {
+    comic = 0,
+    magazine,
+    paperback,
+}
+
+const book : BookEnum =  10;
+```
+
+2. 存在しないインデックスにアクセスできる
+```typescript
+enum BookEnum {
+    comic = 0,
+    magazine,
+    paperback,
+}
+
+console.log(BookEnum[5]); // // undefined
+```
+
+
 ### Tips
 - vscode で html と入力すると候補が表示される。html5を選択するとテンプレt－とが表示される
 - script タグのdefer 属性でhtmlを解析してからjavascriptを読み込むように設定できる
