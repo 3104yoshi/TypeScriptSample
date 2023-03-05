@@ -46,11 +46,26 @@ enum BookEnum {
 console.log(BookEnum[5]); // // undefined
 ```
 
-- 解決策 (Union 型を使う。※Enumでは数値が割り当てられていたが、この場合は割り当てられない)
-
+- 解決策
+1. Union 型を使う。※Enumでは数値が割り当てられていたが、この場合は割り当てられない
 ```typescript
 type BookEnum = "comic" | "magazine" | "paperback";
 const book : BookEnum = "textbook"; // コンパイルエラー
+```
+
+2. オブジェクトリテラルを使う。※各列挙子に対してユニークな数値が割り当てられる
+```typescript
+const BookEnum = {
+  comic: 0,
+  magazine: 1,
+  paperback: 2,
+};
+
+// keyof はオブジェクト型からプロパティ名を型として返す演算子
+// オブジェクト型のvalue を取り出すときは、object[key] で取り出せる
+type BookEnum = typeof BookEnum[keyof typeof BookEnum]; 
+
+console.log(BookEnum.comic)
 ```
 
 ### Tips
