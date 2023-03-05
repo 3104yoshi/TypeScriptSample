@@ -6,3 +6,5 @@
 ### Tips
 - vscode で html と入力すると候補が表示される。html5を選択するとテンプレt－とが表示される
 - script タグのdefer 属性でhtmlを解析してからjavascriptを読み込むように設定できる
+- npm init はファイル名に日本語が含まれてるとエラーが出る
+- 
