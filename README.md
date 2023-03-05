@@ -46,6 +46,12 @@ enum BookEnum {
 console.log(BookEnum[5]); // // undefined
 ```
 
+- 解決策 (Union 型を使う)
+
+```typescript
+type BookEnum = "comic" | "magazine" | "paperback";
+const book : BookEnum = "textbook"; // コンパイルエラー
+```
 
 ### Tips
 - vscode で html と入力すると候補が表示される。html5を選択するとテンプレt－とが表示される
