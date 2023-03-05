@@ -46,7 +46,7 @@ enum BookEnum {
 console.log(BookEnum[5]); // // undefined
 ```
 
-- 解決策 (Union 型を使う)
+- 解決策 (Union 型を使う。※Enumでは数値が割り当てられていたが、この場合は割り当てられない)
 
 ```typescript
 type BookEnum = "comic" | "magazine" | "paperback";
