@@ -8,5 +8,5 @@
 - script タグのdefer 属性でhtmlを解析してからjavascriptを読み込むように設定できる
 - npm init はファイル名に日本語が含まれてるとエラーが出る
 - npm initで様々な依存関係を追加するのに必要なpackage.json を追加できる
-- npm install --save-dev -lite-server で
+- npm install --save-dev lite-server で
 - --save-dev は開発中にのみ必要なものをインストールするときのオプション。本オプションをつけてインストールしたモジュールは実際のプロダクトには含まれない
