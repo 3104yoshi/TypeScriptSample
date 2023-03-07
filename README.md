@@ -22,6 +22,32 @@
   - package.json の devDependencies にlite-server が追加される
   - package.json の scripts に開発に使用するツールを設定する
 
+### コンパイル
+- npx tsc app.ts でコンパイルできる
+- npx tsc app.ts --watch でウォッチモードにできる。.tsファイルが変更された時点で自動でコンパイルされる。 (--w でも可)
+  - ↑だと、app.tsしか監視されない
+- ルートディレクトリで npx tsc --init を実行すると、ルート以下のサブディレクトリも含めて1つのプロジェクトとみなされる。 (tsconfig.json が生成される)
+  - その上で npx tsc とすると、すべての.ts ファイルがコンパイルされる
+  - また、npx tsc --watch とすることで、ウォッチモードを使うこともできる
+#### tsconfigの設定
+- "exclude": [] に .tsファイルを定義するとコンパイルが行われなくなる
+- "include": [] に指定すると、ここに定義した .ts ファイルだけがコンパイルされる
+- include と exclude の両方を定義すると、include の中から esclude で定義したファイルが除外される
+###### compilerOptions
+- target 
+  - javascript のバージョンを指定できる
+- Lib
+  - javascript に必要なライブラリを設定できる
+  - デフォルトでは target で指定したバージョンに合わせたライブラリが設定される
+- allowjs, checkjs
+- jsx
+  - React を使う際に必要なオプション
+- declaration
+  - ライブラリとして使用したい場合に指定する
+- SourceMap
+  - true にすると、.js.map が生成される
+  - typescript と javascript のコードを対応付けしたファイル
+
 ### enumについて
 - 安全上の問題がある (以下、誤った使い方をしているが、コンパイルエラーが出ないパターン)
 1. 10 は初めに定義していないが代入できる
