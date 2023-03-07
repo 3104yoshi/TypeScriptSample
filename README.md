@@ -47,6 +47,17 @@
 - SourceMap
   - true にすると、.js.map が生成される
   - typescript と javascript のコードを対応付けしたファイル
+- outdir
+  - .ts コンパイル時の.js の出力先を設定できる
+  - 慣習的に　/src に .ts を配置し、 /dist に .js を配置することが多い (dist は distributable の略)
+  - 入力元のフォルダ構成はそのままにコンパイルされる
+- rootdir
+  - .ts の配置元
+  - ここで指定したフォルダの外に .ts ファイルが存在するとコンパイルエラーとなる
+- removeComment
+  - コンパイル時にコメントを削除する
+- noOmitOnError
+  - true に設定すると、コンパイルエラーがあるときに .js が出力されなくなる
 
 ### enumについて
 - 安全上の問題がある (以下、誤った使い方をしているが、コンパイルエラーが出ないパターン)
