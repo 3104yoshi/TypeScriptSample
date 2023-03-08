@@ -109,6 +109,9 @@ type BookEnum = typeof BookEnum[keyof typeof BookEnum];
 console.log(BookEnum.comic)
 ```
 
+### Debug
+- JavaScriptDebugger を使用する。 (Chrome for Debugger は 2021年に非推奨になった)
+
 ### Tips
 - vscode で html と入力すると候補が表示される。html5を選択するとテンプレt－とが表示される
 - script タグのdefer 属性でhtmlを解析してからjavascriptを読み込むように設定できる
