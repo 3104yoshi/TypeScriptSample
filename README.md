@@ -111,6 +111,9 @@ console.log(BookEnum.comic)
 
 ### Debug
 - JavaScriptDebugger を使用する。 (Chrome for Debugger は 2021年に非推奨になった)
+- ブレークポイントを貼ってデバッグを開始すると、初回のみ選択肢が現れるので、表示したいブラウザを選択する
+- 初回のみurl のポートを3000にする必要がある
+- 変更後、コンパイルする。
 
 ### Tips
 - vscode で html と入力すると候補が表示される。html5を選択するとテンプレt－とが表示される
