@@ -23,3 +23,7 @@ const array = { ...originalArray }
 
 ### interface
 - JavaScript には存在しないため、コンパイル後のコードには定義されない
+
+### 型キャスト
+- as HTMLInputElement のようにするとキャストできる
+- 先頭に <HTMLInputElement> としてもよいが、React を使う場合に衝突する可能性があるので非推奨
