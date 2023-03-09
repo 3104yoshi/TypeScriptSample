@@ -20,3 +20,6 @@ const array = { ...originalArray }
 ### 分割代入
 - 配列の分割代入
 - オブジェクトの分割代入
+
+### interface
+- JavaScript には存在しないため、コンパイル後のコードには定義されない
