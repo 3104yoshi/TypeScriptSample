@@ -41,4 +41,25 @@ const array = { ...originalArray }
   
   - デコレータファクトリを使用するとデコレータをカスタマイズできる
   - 以下のようにすると、html の app に対してDOM を生成することができる
-'''
+  
+''' TypeScript
+function WithTemplate(template: string, hookId: string) {
+    return function(_: Function) {
+      const hookEl = document.getElementById(hookId);
+      if (hookEl) {
+        hookEl.innerHTML = template;
+      }
+    };
+  }
+  
+// @Logger('ログ出力中 - PERSON')
+@WithTemplate('<h1>Personオブジェクト</h1>', 'app')
+class Person {
+    name = 'Max';
+
+    constructor() {
+        console.log('Personオブジェクトを作成中...');
+    }
+}
+
+```
