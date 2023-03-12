@@ -41,8 +41,8 @@ const array = { ...originalArray }
   
   - デコレータファクトリを使用するとデコレータをカスタマイズできる
   - 以下のようにすると、html の app に対してDOM を生成することができる
-  
-'''
+
+```
 function WithTemplate(template: string, hookId: string) {
     return function(_: Function) {
       const hookEl = document.getElementById(hookId);
