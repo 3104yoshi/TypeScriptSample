@@ -68,3 +68,6 @@ class Person {
 
 ### プロパティデコレータ
   - 110参照
+  
+### getElementById
+  - 何らかのHTMLElement を返すことしかわからないため、直接HTMLTemplateElement に格納しようとするとエラーがでる
